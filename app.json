@@ -1,0 +1,11 @@
+{
+  "expo": {
+    "name": "Myitinerary-app",
+    "slug": "Myitinerary-app",
+    "version": "1.0.0",
+    "assetBundlePatterns": [
+      "**/*"
+    ]
+  },
+  "name": "Myitinerary-app"
+}
