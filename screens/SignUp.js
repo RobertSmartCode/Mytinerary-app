@@ -111,7 +111,7 @@ const SignUp = (props) => {
                     <Image style={styles.eye} source={viewPass ? eyeClose : eyeOpen} />
                 </Pressable>
             </ImageBackground>
-            <TextInput underlineColorAndroid='transparent' style={styles.input} placeholderTextColor={"rgb(83, 82, 82)"} placeholder="email" defaultValue={newUser.email} onChange={(e)=> setNewUser({...newUser, email: e.nativeEvent.text})}/>
+            <TextInput underlineColorAndroid='transparent' style={styles.input} placeholderTextColor={"rgb(83, 82, 82)"} placeholder="Email" defaultValue={newUser.email} onChange={(e)=> setNewUser({...newUser, email: e.nativeEvent.text})}/>
             <TextInput underlineColorAndroid='transparent' style={styles.input} placeholderTextColor={"rgb(83, 82, 82)"} placeholder="Photo" defaultValue={newUser.photoUser} onChange={(e)=> setNewUser({...newUser, photoUser: e.nativeEvent.text})}/>
             <SelectDropdown style={styles.inputSelect} 
                 data={countries}

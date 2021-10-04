@@ -17,7 +17,7 @@ const City = (props) => {
         <ScrollView style={styles.contain}>
             
             <View>
-                <ImageBackground style={styles.coverPhoto} source={require("../assets/brasilia.jpg")}>
+                <ImageBackground style={styles.coverPhoto} source={{uri:`https://my-tinerary-goitia.herokuapp.com/${props.cityOne.photo}`}}>
                     <View style={styles.cityContain}>
                         <Text style={styles.city}>
                             {props.cityOne.city}

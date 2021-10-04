@@ -22,7 +22,7 @@ const CommentComp = (props) => {
 
     return (
         <View style={styles.containComment}>
-            <Image style={styles.photoUser} source={require("../assets/brasilia.jpg")}/>
+            <Image style={styles.photoUser} source={{uri:`${props.commentCurrent.userId.photoUser}`}}/>
             <View style={styles.containProfile}>
                 <Text>{commentCurrent.userId.name}</Text>
                 <View style={styles.containMessage}>

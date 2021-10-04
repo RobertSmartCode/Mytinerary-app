@@ -42,12 +42,10 @@ const [cityFilt, setCityFilt] = useState([])
                 keyExtractor={(item) => item._id}
                 renderItem={({item}) => (
                     
-                    <View>
-                        <TouchableOpacity>
-                            <ImageBackground    style={styles.carouselPhoto} >
-                                <Text onPress={
-                                    ()=>props.navigation.navigate("City",
-                                    {id: item._id})} style={styles.textImage}>{item.city}</Text> 
+                    <View style={styles.cities}>
+                        <TouchableOpacity onPress={()=>props.navigation.navigate("City", {id: item._id})}>
+                            <ImageBackground  source={{uri:`https://my-tinerary-goitia.herokuapp.com/${item.photo}`}}  style={styles.carouselPhoto} >
+                                <Text  style={styles.textImage}>{item.city}</Text> 
                             </ImageBackground>
                         </TouchableOpacity>
                     </View>
@@ -69,12 +67,12 @@ const [cityFilt, setCityFilt] = useState([])
                 
             
 
-            <View style={styles.navFooter}>
+            {/* <View style={styles.navFooter}>
                 <Text style={styles.footer}>Home</Text>
                 <Text style={styles.footer}>Cities</Text>
                 <Text style={styles.footer}>Sign up</Text>
                 <Text style={styles.footer}>Sign in</Text>
-            </View>
+            </View> */}
 
             
         </View>
@@ -85,6 +83,12 @@ const [cityFilt, setCityFilt] = useState([])
 const styles = StyleSheet.create({
     container: {
         flex: 1,
+    },
+
+    cities: {
+        borderWidth: 1.5,
+        marginHorizontal: 15,
+        marginTop: 20,
     },
 
     nav: {
@@ -134,10 +138,7 @@ const styles = StyleSheet.create({
     },
 
     carouselPhoto: {
-        marginBottom: 10,
-        marginRight: 10,
         height: 180,
-        width: "100%",
     },
 
     textImage: {
@@ -145,6 +146,7 @@ const styles = StyleSheet.create({
         color: "black",
         fontWeight: "bold",
         textAlign: "center",
+        backgroundColor: "rgba(255, 255, 255, 0.63)"
     },
 })
 

@@ -4,7 +4,7 @@ const activitiesActions = {
     getActivitiesPerIt: (link) => {
         return async () => {
             try {
-                let response = await axios.get(`http://192.168.1.33:4000/api/activity/${link}`)
+                let response = await axios.get(`https://my-tinerary-goitia.herokuapp.com/api/activity/${link}`)
                 if(response.data.success){
                     return response.data.response
                 }

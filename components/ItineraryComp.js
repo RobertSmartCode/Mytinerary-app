@@ -9,7 +9,6 @@ import Icon from "react-native-vector-icons/FontAwesome"
 
 const ItineraryComp = (props) => {
     const {price, hashtag, description, author, photo, duration, itinerary, likes, _id, comments} = props.itinerary
-    console.log(hashtag)
     const [itinerariesLike, setItinerariesLike] = useState(likes)
     const [likeIcon, setLikeIcon] = useState(true)
     const [activities, setActivities] = useState([])
@@ -51,10 +50,10 @@ const ItineraryComp = (props) => {
         <View style={styles.contain}>
             
             <View style={styles.card}>
-                <Image style={styles.photo} source={require("../assets/quito.jpg")}/>
+                <Image style={styles.photo} source={{uri:`${photo}`}}/>
                 <View style={styles.cardIn}>
                     <View style={styles.containAuthor}>
-                        <Image style={styles.authorPhoto} source={require("../assets/quito.jpg")}/>
+                        <Image style={styles.authorPhoto} source={{uri:`${author.photo}`}}/>
                         <Text style={styles.authorName} >{author.name}</Text>
                     </View>
                     <Text style={styles.itinerary} >{itinerary}</Text>

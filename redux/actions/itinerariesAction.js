@@ -4,7 +4,7 @@ const itinerariesActions = {
     getItinerariesCity: (link) => {
         return async (dispatch, getState) => {
             try {
-                let response = await axios.get(`http://192.168.1.33:4000/api/itineraries/${link}`)
+                let response = await axios.get(`https://my-tinerary-goitia.herokuapp.com/api/itineraries/${link}`)
                 if (response.data.success){
                     let data = response.data.response
                     dispatch({type: "GET_ITINERARIES_CITY", payload: data}) 
@@ -18,7 +18,7 @@ const itinerariesActions = {
     addComment: (id, comment, token) => {
         return async ()=> {
             try {
-                let response = await axios.put(`http://192.168.1.33:4000/api/itineraries/comments/${id}`, {comment, type:"addComment"}, 
+                let response = await axios.put(`https://my-tinerary-goitia.herokuapp.com/api/itineraries/comments/${id}`, {comment, type:"addComment"}, 
                 {headers: {
                     Authorization: "Bearer " + token
                     }
@@ -34,7 +34,7 @@ const itinerariesActions = {
     modifyComment: (id, comment, token) => {
         return async ()=> {
             try {
-                let response = await axios.put(`http://192.168.1.33:4000/api/itineraries/comments/${id}`, {comment, type:"modifyComment"}, 
+                let response = await axios.put(`https://my-tinerary-goitia.herokuapp.com/api/itineraries/comments/${id}`, {comment, type:"modifyComment"}, 
                 {headers: {
                     Authorization: "Bearer " + token
                     }
@@ -50,7 +50,7 @@ const itinerariesActions = {
     deleteComment: (id, idComment, token) => {
         return async ()=> {
             try {
-                let response = await axios.put(`http://192.168.1.33:4000/api/itineraries/comments/${id}`, {idComment, type:"deleteComment"}, 
+                let response = await axios.put(`https://my-tinerary-goitia.herokuapp.com/api/itineraries/comments/${id}`, {idComment, type:"deleteComment"}, 
                 {headers: {
                     Authorization: "Bearer " + token
                     }
@@ -67,7 +67,7 @@ const itinerariesActions = {
     likeItinerary: (id, token) =>{
         return async () => {
                 try{
-                    let response = await axios.put(`http://192.168.1.33:4000/api/itinerary/like/${id}`, {},{
+                    let response = await axios.put(`https://my-tinerary-goitia.herokuapp.com/api/itinerary/like/${id}`, {},{
                     headers:{
                         Authorization: 'Bearer '+token
                     }

@@ -5,19 +5,14 @@ import CommentsComp from "./CommentsComp"
 LogBox.ignoreAllLogs(true)
 
 const ActivitiesComp = (props) => {
-    console.log("llega"+props.verifyComment)
     const {activities} = props
     const [verifyComment, setVerifyComment] = useState(props.verifyComment)
-
-  
-
-    
 
     const renderItem = ({ item }) => {
         return (
             <View >
                     <View  style={styles.carouselContain} >
-                        <ImageBackground style={styles.carouselPhoto} source={require("../assets/brasilia.jpg")} >
+                        <ImageBackground style={styles.carouselPhoto} source={{uri:`${item.picAct}`}} >
                             <Text style={styles.textImage}>{item.title}</Text> 
                         </ImageBackground>
                     </View>

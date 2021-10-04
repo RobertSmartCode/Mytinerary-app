@@ -16,7 +16,7 @@ const CustomDrawerContent = (props) => {
                             Welcome {name}
                         </Text>
                     </> :
-                 <Image style={styles.photoUser} source={require("../assets/sesion.png")}/>}
+                    <Image style={styles.photoGeneric} source={require("../assets/sesion.png")}/>}
             </View>
             <DrawerContentScrollView {...props} activeBackgroundColor="red">
                 <DrawerItemList {...props} />
@@ -72,6 +72,11 @@ export default connect(mapStateToProps, mapDispatchToProps)(CustomDrawerContent)
             borderRadius: 100
         },
 
+        photoGeneric: {
+            width: 80,
+            height: 80,
+        },
+        
         drawerItem: {
 
         },

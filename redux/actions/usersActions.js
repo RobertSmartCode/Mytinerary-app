@@ -6,7 +6,7 @@ const usersActions = {
         
         return async (dispatch, getState) => {
             try {
-                let respuesta = await axios.post("http://192.168.1.33:4000/api/signup", newUser)
+                let respuesta = await axios.post("https://my-tinerary-goitia.herokuapp.com/api/signup", newUser)
                 if (respuesta.data.success){
                     
                     await AsyncStorage.setItem("token",  respuesta.data.response.token)
@@ -23,7 +23,7 @@ const usersActions = {
     logIn: (userLog) => {
         return async (dispatch) => {
             try {
-                let respuesta = await axios.post("http://192.168.1.33:4000/api/login", userLog)
+                let respuesta = await axios.post("https://my-tinerary-goitia.herokuapp.com/api/login", userLog)
                 if (respuesta.data.success) {
                     await AsyncStorage.setItem("token",  respuesta.data.response.token)
                     dispatch({type: "SIGN", payload: respuesta.data.response})
@@ -39,7 +39,7 @@ const usersActions = {
         
         return async (dispatch) => {
            try {
-                let response = await axios.get("http://192.168.1.33:4000/api/verifyToken", {
+                let response = await axios.get("https://my-tinerary-goitia.herokuapp.com/api/verifyToken", {
                     headers: {
                         Authorization: "Bearer " + token
                     }

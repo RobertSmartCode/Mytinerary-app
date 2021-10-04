@@ -48,7 +48,7 @@ const Home = (props) => {
                 <Image  source={require("../assets/LOGO2.png")} style={styles.logo} />
                 <Text style={styles.callAction} >Choose your destination!</Text>
                 <TouchableOpacity>
-                    <Text style={styles.callActionButton} onPress={()=>{props.navigation.navigate("Cities")}}>Click here!</Text>
+                    <Text style={styles.callActionButton} onPress={()=>{props.navigation.navigate("Cities")}}>Press here!</Text>
                 </TouchableOpacity>
             </ImageBackground>
 

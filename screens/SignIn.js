@@ -88,7 +88,7 @@ const SignIn = (props) => {
                 </Pressable>
             </ImageBackground>
             <TouchableOpacity onPress={submitInput}>
-                <Text style={styles.sign}>Enviar</Text>
+                <Text style={styles.sign}>Sign</Text>
             </TouchableOpacity>
 
             {/* <TouchableOpacity style={styles.account} >
